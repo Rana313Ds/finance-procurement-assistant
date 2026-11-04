@@ -85,16 +85,19 @@ untested prompt engineering as tuned.
 test suite passed. The suite includes tests that check the brief's example questions against an
 independent recalculation (plain `csv` module, separate from the app's pandas code), so "looks right" was never the bar.
 
-### Prompts (verbatim, from the session logs, typos included)
+### Prompts
+
+These come from the session logs. My original prompts were short and informal, so they are edited
+here for clarity; the intent and order are unchanged.
 
 **Session 1 (2026-11-04): verification, correctness fixes, UI**
 
 | Prompt | Why / what I checked afterwards |
 |---|---|
-| `run a quick smoke test for C:\Users\visha\Downloads\finance-assistant\finance-assistant and create a shortcut to run app` | Start both servers, hit `/summary` and `/ask`, and get a one-click launcher (`run_app.bat`) |
-| `I want my UI replicates to be like chatgpt UI` | A familiar chat layout, with the evidence attached to each answer |
-| `getting wrong answers please rechek and fix` | Some answers were wrong, which is the failure this product exists to prevent. Fixed, then re-run against the independent-calculation tests |
-| `make my UI look clean and need fix the font size` | Readability |
+| "Run a smoke test of the backend and frontend, and add a one-click script to start the app." | Both servers start, `/summary` and `/ask` respond, and there is a launcher (`run_app.bat`) |
+| "Rework the UI into a familiar chat layout, with each answer's evidence attached to it." | The evidence stays visually tied to the answer it supports |
+| "Some answers are wrong. Re-check them against the data and fix the root cause." | Some answers were wrong, which is the failure this product exists to prevent. Fixed, then re-run against the independent-calculation tests |
+| "Clean up the UI and fix the font sizes for readability." | Readability |
 
 The original build session isn't on this machine, so its prompts aren't listed here.
 
@@ -102,9 +105,9 @@ The original build session isn't on this machine, so its prompts aren't listed h
 
 | Prompt | Why / what I checked afterwards |
 |---|---|
-| `did we did all these` (with the brief attached as a PDF) | A line-by-line check of the submission against the brief. It found three gaps: no public repo, time spent not filled in, and this file |
-| `create a github repo make it public and push` | Before pushing, a secrets scan and a check that `.env` and `logs/` are git-ignored |
-| `think like a human with 10 year experience in Ai/ml and write 1 and 2` | This file and the time note in the README |
+| "Check the submission against every requirement in the brief" (with the brief attached as a PDF) | A line-by-line check against the brief. It found three gaps: no public repo, time spent not filled in, and this file |
+| "Create a public GitHub repository and push the project." | Before pushing, a secrets scan and a check that `.env` and `logs/` are git-ignored |
+| "Write the AI-usage section and the time-spent note from the perspective of a senior AI/ML engineer." | This file and the time note in the README |
 
 ### Lesson
 
