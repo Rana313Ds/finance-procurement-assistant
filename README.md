@@ -97,7 +97,13 @@ prompts should be included. Thumbs-down feedback from analysts feeds new cases.
 
 ## Time and next steps
 
-**Time:** TODO: add actual time spent.
+**Time:** about 5.5 hours in total. Roughly 4 hours went on the build: the data and policy layer
+first, then the plan → tools → compose → check pipeline, then the UI. The last 1.5 hours went on
+testing against independent calculations, fixing wrong answers that turned up, UI clean-up, and
+checking the submission against the brief. Most of the time went into the data decisions above (FX,
+credit notes, `cannot_verify`) rather than into the LLM calls. That was deliberate: in a
+controls setting, the data semantics are where answers go wrong. How AI tools were used, with the
+prompts, is in [AI_USAGE.md](AI_USAGE.md).
 
 **Next:** run the prompts on a live model and tune them with a golden set; fetch daily FX rates and
 check the rankings; add follow-up questions; and ask Finance to confirm the open interpretations, such as
